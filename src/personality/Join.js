@@ -36,7 +36,35 @@ const Join = () => (
         </p>
         <p>
             <label>
-                Birth : <input type="password" id="user_pwd" size="10" minlength="6"/>
+                Birth : <br/><select>
+                            <option value="">MM</option>
+                            <option value="">Apple</option>
+                            <option value="banana">Banana</option>
+                            <option value="orange">Orange</option>
+                            <option value="berry">Berry</option>
+                        </select>
+            </label>
+        </p>
+        <p>
+            <label>
+                Passport : <input type="text" size="10" minlength="7"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                Address : Address line 1<br/>&emsp;&emsp;&emsp;&emsp;<input type="text" id="user_englishName" size="10"/>
+                <p>City&emsp;&emsp;&emsp;&emsp; State<br/><input type="text" id="user_englishName" size="10"/><input type="text" id="user_englishName" size="10"/></p>
+                <p>ZIP<br/><input type="text" id="user_englishName" size="10"/></p>
+            </label>
+        </p>
+        <p>
+            <label>
+                Email : <input type="email" id="user_email"/>
+            </label>
+        </p>
+        <p>
+            <label>
+                Gender : <input type="checkbox"/>Female <input type="checkbox"/>Male
             </label>
         </p>
         <p>
