@@ -1,4 +1,8 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 const Join = () => (
     <><table>
@@ -36,13 +40,7 @@ const Join = () => (
         </p>
         <p>
             <label>
-                Birth : <br/><select>
-                            <option value="">MM</option>
-                            <option value="">Apple</option>
-                            <option value="banana">Banana</option>
-                            <option value="orange">Orange</option>
-                            <option value="berry">Berry</option>
-                        </select>
+                Birth : <br/><Example/>
             </label>
         </p>
         <p>
@@ -77,3 +75,9 @@ const Join = () => (
 
 export default Join
 
+const Example = () => {
+    const [startDate, setStartDate] = useState(new Date());
+    return (
+      <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+    );
+  };
