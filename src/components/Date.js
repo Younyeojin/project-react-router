@@ -5,7 +5,7 @@ import ko from 'date-fns/locale/ko';
 registerLocale('ko', ko);
 
 
-function Date() {
+const Date = () => {
     const [startDate, setStartDate] = useState(new Date());
     const ExampleCustomInput = ({ value, onClick }) => ( <button class="example-custom-input" onClick={onClick}> {value} </button> );
     const getFormattedDate = (date) => { const month = date.toLocaleDateString('ko-KR', { month: 'long', });
