@@ -5,14 +5,12 @@ import styled from 'styled-components';
 
 const Join = () => (
     
-    <Table>
-    <ul>
+    <Div>
+    <form>
+        <Label>ID : </Label>
+        <input type="text" id="user_id" size="10" minlength="4"/>
         <p>
-            <Label>ID : </Label>
-            <input type="text" id="user_id" size="10" minlength="4"/>          
-        </p>
-        <p>
-            <Label>Password : </Label>
+            <Label>Password :</Label>
             <input type="password" id="user_pwd" size="10" minlength="6"/>           
         </p>
         <p>
@@ -36,8 +34,8 @@ const Join = () => (
             <input id="gender-type-2" name="gender-type" type="radio" value="Male"/>
             <label for="gender-type-2" class="radio-label">Female</label>
         </p>
-        <p> Birth : &ensp; <input type ="date"></input>
-        </p>
+            <Label> Birth : </Label> 
+            <input type ="date"></input>        
         <p>
             <Label>Passport : </Label>
             <input type="text" size="10" minlength="7"/>
@@ -50,11 +48,11 @@ const Join = () => (
         </p>
         <p>
             <Label>
-                Email : <input type="text" name="email_id" id="email_id"/> @ </Label><input type="text" name="email_add" id="email_add"/>
-                <select name="email_sel" id="email_sel" onchange="change_email();">
-                <option value="">직접입력</option>
-                <option value="naver.com">naver</option><option value="gmail.com">gmail</option><option value="daum.net">daum</option>
-                </select>
+            Email : <input type="text" name="email_id" id="email_id"/> @ </Label><input type="text" name="email_add" id="email_add"/>
+            <select name="email_sel" id="email_sel" onchange="change_email();">
+            <option value="">직접입력</option>
+            <option value="naver.com">naver</option><option value="gmail.com">gmail</option><option value="daum.net">daum</option>
+            </select>
         </p>
         <p>
             <Label>Phone : </Label>
@@ -63,38 +61,40 @@ const Join = () => (
             <br/><input type="text" id="user_phone" size="10"/><input type="submit" value="인증하기"/>
             
         </p>
-        <Atable>
-            <label>선호하는 취향</label>
+        <Atable>선호하는 취향</Atable>
+        <Btable>
             <tr>  
-                <td>Who is your favorite TripMate?</td>
+                <Td>Who is your favorite TripMate?</Td>           
                 <td>Who is your favorite TripMate?</td>
             </tr>
+            <tr><input type="checkbox" value=""/>Alone</tr>
+            <tr><input type="checkbox" value=""/>Alone</tr>
+            <tr><input type="checkbox" value=""/>Alone</tr>
+            
             <tr>
                 <td>Who is your favorite TripMate?</td>
                 <td>Who is your favorite TripMate?</td>
             </tr>
-        </Atable>
+        </Btable>
         <p>
             <input type="radio" value=""/> 약관에 동의하시겠습니까?
         </p>
         <p>
             <input type="submit" value="Join"/>
         </p>
-        
-    </ul>
-    
-    </Table>    
+    </form>
+    </Div>    
 )
 
 export default Join
 
-const Table = styled.div`
+const Div = styled.div`
     width: 600px;
     // height: 0 auto;
     margin: 0 auto;
     background-color: #D4F4FA;
-    text-align: left;
-    // text-justify: auto;
+    text-align: center;
+    justify-content: center;
     display: flex;
     // border: 1px solid black;
     margin-top: 40px;
@@ -103,11 +103,15 @@ const Table = styled.div`
 const Label = styled.div`
     font-weight: bold;
 `
-const Atable=styled.table`
-    border: 1px solid black;
+const Btable=styled.table`
+    // border: 1px solid black;
+    text-align: left;
+    margin: 0 s;
 `
-
-
-
-//<label>Gender :</label>
-//<input type="checkbox"/>Female <input type="checkbox"/>Male
+const Atable=styled.div`
+    font-weight: bold;
+    text-align: center;
+`
+const Td=styled.td`
+    padding-right: 100px;
+`
